@@ -1,0 +1,19 @@
+Migration Commands
+
+HABILITAR MIGRATIONS
+Enable-Migrations
+
+ADICIONAR MIGRATION
+Add-Migration NomeDoMigration
+
+APOS ADICIONAR O MIGRATION, ATUALIZAR O DATABASE
+Update-Database -Verbose
+
+GERAR TODAS AS MIGRATIONS PARA O CLIENTE
+Update-Database -Script -SourceMigration:$InitialDatabase -TargetMigration: "NomeDoUltimoMigration"
+
+ROLLBACK
+Update-Database -TargetMigration:"MigrationTarget"
+
+
+
